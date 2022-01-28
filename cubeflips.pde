@@ -24,7 +24,7 @@ float ease(float p, float g) {
 
 float map(float x, float a, float b, float c, float d, boolean constr)
 {
-  return constr ? c01(map(x,a,b,c,d)) : map(x,a,b,c,d);
+  return constr ? constrain(map(x,a,b,c,d),c,d) : map(x,a,b,c,d);
 }
 
 float mp01(float x, float a, float b)
